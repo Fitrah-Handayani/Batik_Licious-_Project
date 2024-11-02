@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  overflow-x: hidden;
+  background-color: #fafafa;
+  background-image: url('../images/background batik.jpg')
+}
+
+/* Navbar */
+
+.logo img {
+  width: 214px;
+}
+
+nav {
+  display: flex;
+  background-color: #ecdfc4;
+  justify-content: space-around;
+  padding: 8px 0;
+  align-items: center;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 70%;
+  justify-content: space-around;
+}
+
+.accCart {
+  display: flex;
+  padding-left: 100px;
+}
+
+.accCart li {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 15px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+nav ul li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #50413d;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+nav ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -5px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/*Form*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 420px;
+  background: #ecdfc4;
+  color: #50413d;
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin-top: 5rem;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.container h1 {
+  font-size: 34px;
+  text-align: center;
+}
+
+.container .input-box {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50px;
+  margin : 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(225, 255, 255, 0.2);
+  border-radius: 50px;
+  color: #333;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input ::placeholder {
+  color: #333;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.container .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.container .login-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+
+.login-link p a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+  }
+  
+
+
+ .gender select {
+    padding: none;
+    border-radius: 50px;
+    margin : 0 20px;
+    width: 90%;
+    height: 100%;
+    background: transparent;
+    border: #fff;
+    color: #333;
+
+}
+
+.container .gender {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50px;
+  margin : 30px 0;
+}
+
+.birth {
+    padding: none;
+    border-radius: 50px;
+    margin : none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: #fff;
+    color: #333;
+
+}
+
+.birth input[type="date"] { 
+  width: calc(100% / 3);  
+  padding: 10px;
+  border: 0px solid #ccc;
+  border-radius: 50px;
+  margin: none; 
+  width: 100%;
+  height: 50px;
+
+}

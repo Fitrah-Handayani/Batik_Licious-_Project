@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BatikLicious</title>
+    <link rel="Stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+        <img src="../images/navLogo.svg">
+    </div>
+
+    <ul>
+        <li><a href="../homepage.php">Home</a></li>
+        <li><a href="../collections.php">Collection</a></li>
+        <li><a href="../about_us.php">About Us</a></li>
+        <div class="accCart">
+            <li><img src="../images/account_icon.png" style="height: 25px;"><a href="index.html">Login</a></li>
+            <li><img src="../images/cart_icon.png" style="height: 25px;"><a href="#">Cart</a></li>
+        </div>
+    </ul>
+
+    <div class="menu-toggle">
+        <input type="checkbox" name="" id="" />
+          <span></span>
+          <span></span>
+          <span></span>
+    </div>
+</nav>
+
+<div class="container">
+    <form action="authenticate.php" method="post">
+      <h1>LOGIN</h1>
+      <div class="input-box">
+        <input type="text" name="username" placeholder="Username" required>
+      </div>
+      <div class="input-box">
+        <input type="password" name="password" placeholder="Password" required>
+      </div>
+
+      <div class="remember-forgot">
+        <label><input type="checkbox">Remember me</label>
+        <a href="#">Forgot Password</a>
+      </div>
+
+      <button type="submit" class="btn">Login</button>
+
+      <div class="register-link">
+        <p>Don't have an account ? 
+          <a href="../phpregister/register.html">Register</a></p>
+      </div>
+  </form>
+</div>
+
+</body>
+</html>

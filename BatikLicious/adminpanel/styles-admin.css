@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+/* Navbar */
+
+.logo img {
+  width: 214px;
+}
+
+nav {
+  display: flex;
+  background-color: #ecdfc4;
+  justify-content: space-around;
+  padding: 8px 0;
+  align-items: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 70%;
+  justify-content: space-around;
+}
+
+.accCart {
+  display: flex;
+  padding-left: 100px;
+}
+
+.accCart li {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 15px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+nav ul li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #50413d;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+nav ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -5px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Hamburger Menu Anim */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ :nth-child(2) {
+  transform: rotate(45deg) translate(-1px, 0px);
+}
+
+.menu-toggle input:checked ~ :nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.menu-toggle input:checked ~ :nth-child(3) {
+  transform: scale(0);
+}
+
+footer {
+  margin-top: 10vh;
+  background-color: #50413D;
+  color: white;
+  padding: 30px 0;
+  height: 180px;
+}
+
+.footer-logo {
+  margin-right: 250px;
+}
+
+.footer-content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer-section .social-link {
+  display: block;
+  margin-top: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-section .social-link:hover {
+  text-decoration: underline;
+}
+
+.footer-section .social-icon {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  text-align: center;
+}
+
+/* Table Style */
+.container {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f0f0f0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.produkNama {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: auto;
+}
+
+.btn:hover {
+  background-color: #3e8e41;
+}
+
+.update-btn {
+  background-color: #337ab7;
+}
+
+.update-btn:hover {
+  background-color: #23527c;
+}
+
+.delete-btn {
+  background-color: #d9534f;
+}
+
+.delete-btn:hover {
+  background-color: #c9302c;
+}
+
+/* Tambah Produk */
+.form-tambah_produk {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-tambah_produk h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-tambah_produk label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-tambah_produk input[type="text"],
+.form-tambah_produk input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-tambah_produk input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-tambah_produk input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
